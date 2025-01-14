@@ -581,7 +581,7 @@ document.addEventListener("DOMContentLoaded", () => {
         category: exCategory.value.trim(),
       };
       try {
-        const res = await fetch("https://test-git-main-aggelos-projects-a5fb9de5.vercel.app//api/exhibitions", {
+        const res = await fetch("https://ctwhtk-5000.csb.app/api/exhibitions", {
           method: "POST",
           headers: getAuthHeader(),
           body: JSON.stringify(body),
@@ -606,7 +606,7 @@ document.addEventListener("DOMContentLoaded", () => {
     async function loadExhibitions() {
       exhibitionsList.innerHTML = "Loading...";
       try {
-        const res = await fetch("https://test-git-main-aggelos-projects-a5fb9de5.vercel.app//api/exhibitions");
+        const res = await fetch("https://ctwhtk-5000.csb.app/api/exhibitions");
         const data = await res.json();
         if (res.ok) {
           renderExhibitions(data);
@@ -647,7 +647,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
           try {
             const res = await fetch(
-              `https://test-git-main-aggelos-projects-a5fb9de5.vercel.app//api/exhibitions/${id}`,
+              `https://ctwhtk-5000.csb.app/api/exhibitions/${id}`,
               {
                 method: "DELETE",
                 headers: getAuthHeader(),
@@ -676,7 +676,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const newCat = prompt("New Category? (current/past)") || "";
           try {
             const res = await fetch(
-              `https://test-git-main-aggelos-projects-a5fb9de5.vercel.app//api/exhibitions/${id}`,
+              `https://ctwhtk-5000.csb.app/api/exhibitions/${id}`,
               {
                 method: "PUT",
                 headers: getAuthHeader(),
@@ -748,7 +748,7 @@ document.addEventListener("DOMContentLoaded", () => {
         category: linkCategory.value.trim(),
       };
       try {
-        const res = await fetch("https://test-git-main-aggelos-projects-a5fb9de5.vercel.app//api/links", {
+        const res = await fetch("https://ctwhtk-5000.csb.app/api/links", {
           method: "POST",
           headers: getAuthHeader(),
           body: JSON.stringify(body),
@@ -773,7 +773,7 @@ document.addEventListener("DOMContentLoaded", () => {
     async function loadLinks() {
       linksList.innerHTML = "Loading...";
       try {
-        const res = await fetch("https://test-git-main-aggelos-projects-a5fb9de5.vercel.app//api/links");
+        const res = await fetch("https://ctwhtk-5000.csb.app/api/links");
         const data = await res.json();
         if (res.ok) {
           renderLinks(data);
@@ -812,7 +812,7 @@ document.addEventListener("DOMContentLoaded", () => {
           if (!confirm("Are you sure you want to delete this link?")) return;
           try {
             const res = await fetch(
-              `https://test-git-main-aggelos-projects-a5fb9de5.vercel.app//api/links/${id}`,
+              `https://ctwhtk-5000.csb.app/api/links/${id}`,
               {
                 method: "DELETE",
                 headers: getAuthHeader(),
@@ -842,7 +842,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const newCat = prompt("New Category? (web/books)") || "";
           try {
             const res = await fetch(
-              `https://test-git-main-aggelos-projects-a5fb9de5.vercel.app//api/links/${id}`,
+              `https://ctwhtk-5000.csb.app/api/links/${id}`,
               {
                 method: "PUT",
                 headers: getAuthHeader(),
@@ -877,7 +877,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function showPublicExhibitions(category) {
     contentArea.innerHTML = "<p>Loading Exhibitions...</p>";
 
-    fetch("https://test-git-main-aggelos-projects-a5fb9de5.vercel.app//api/exhibitions")
+    fetch("https://ctwhtk-5000.csb.app/api/exhibitions")
       .then((res) => res.json())
       .then((exhibitions) => {
         // ΦΙΛΤΡΑΡΙΣΜΑ ΜΕ ΒΑΣΗ ΤΗΝ ΚΑΤΗΓΟΡΙΑ ΤΗΣ ΕΚΘΕΣΗΣ
@@ -912,7 +912,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function showPublicLinks(category) {
     contentArea.innerHTML = "<p>Loading Links...</p>";
 
-    fetch("https://test-git-main-aggelos-projects-a5fb9de5.vercel.app//api/links")
+    fetch("https://ctwhtk-5000.csb.app/api/links")
       .then((res) => res.json())
       .then((links) => {
         const filtered = links.filter((l) => l.category === category);
@@ -1031,7 +1031,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       const response = await fetch(
-        "https://test-git-main-aggelos-projects-a5fb9de5.vercel.app//api/auth/signup",
+        "https://ctwhtk-5000.csb.app/api/auth/signup",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -1068,7 +1068,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       const response = await fetch(
-        "https://test-git-main-aggelos-projects-a5fb9de5.vercel.app//api/auth/signin",
+        "https://ctwhtk-5000.csb.app/api/auth/signin",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
